@@ -1,17 +1,20 @@
-import axios from "axios";
+import axios from 'axios';
+import dotenv from 'dotenv';
+
+dotenv.config(); // Carga las variables de entorno desde el archivo .env
+
+const NASA_API_KEY = process.env.NASA_API_KEY; // Obtén la clave de API desde las variables de entorno
+
+async function getImage() {
+    try {
+        // Realiza la solicitud a la API de la NASA usando la clave de API
+        const response = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=dIW9vbkMdfOG9TRQUMr6pVwU31U6MbBXUNmSpyyL`);
+        return response.data; // Devuelve los datos de la respuesta
+    } catch (error) {
+        throw new Error('Failed to fetch data from NASA API'); // Lanza un error si ocurre una excepción
+    }
+}
 
 export default {
     getImage
-}
-
-function getImage() {
-    //Se genera una nueva promesa con el fin de obtener la imagen del dia
-    return new Promise(async (resolve, reject) => {
-        try {
-            const response = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=dIW9vbkMdfOG9TRQUMr6pVwU31U6MbBXUNmSpyyL`);
-            resolve(response);  // Resuelve la promesa con los datos de la respuesta
-        } catch (error) {
-            reject(error);  // Rechaza la promesa con el error
-        }
-    });
-}
+};
