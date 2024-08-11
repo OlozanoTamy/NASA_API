@@ -1,11 +1,10 @@
-import { useState } from "react";
-import NasaImage from "./components/NasaImage";
 import "./App.css";
+import Routes from "./routes";
 
 function App() {
   return (
     <div>
-      <NasaImage />
+      <Routes />
     </div>
   );
 }
