@@ -3,6 +3,7 @@ import Home from "../views/Home";
 import About from "../views/About";
 import NasaImage from "../views/NasaImage";
 import Contact from "../views/Contact";
+import Asteroides from "../views/Asteroides";
 //Es un arreglo de objetos,donde cada objeto tiene su propia ruta
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/nasa-asteroides",
+    element: <Asteroides />,
   },
 ]);
 

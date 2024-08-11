@@ -3,7 +3,7 @@ import axios from "axios";
 import dotenv from "dotenv";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-
+import styles from "./NasaImage.module.css";
 const NasaImage = () => {
   const [imageData, setImageData] = useState(null);
 
@@ -27,13 +27,15 @@ const NasaImage = () => {
   return (
     <div>
       <Navbar />
-      <h2>{imageData.title}</h2>
-      <img
-        src={imageData.imageUrl}
-        alt={imageData.title}
-        style={{ width: "100%", height: "auto" }}
-      />
-      <p>{imageData.explanation}</p>
+      <div className={styles.container}>
+        <h2>{imageData.title}</h2>
+        <img
+          src={imageData.imageUrl}
+          alt={imageData.title}
+          style={{ width: "100%", height: "auto" }}
+        />
+        <p>{imageData.explanation}</p>
+      </div>
       <Footer />
     </div>
   );

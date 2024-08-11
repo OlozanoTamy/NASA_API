@@ -1,7 +1,10 @@
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 const Contact = () => {
   return (
     <>
-      <h3>Hola mundo</h3>
+      <Navbar />
+      <Footer />
     </>
   );
 };

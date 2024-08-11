@@ -1,40 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav style={{ padding: "10px", backgroundColor: "#333", color: "#fff" }}>
-      <ul style={{ listStyle: "none", display: "flex", gap: "20px" }}>
+    <nav className={styles.container}>
+      <ul className={styles.navBarContainer}>
         <li>
-          <Link to="/" style={{ color: "#fff", textDecoration: "none" }}>
-            Inicio
-          </Link>
+          <Link to="/">Inicio</Link>
         </li>
         <li>
-          <Link to="/about" style={{ color: "#fff", textDecoration: "none" }}>
-            Sobre el Proyecto
-          </Link>
+          <Link to="/about">Sobre el Proyecto</Link>
         </li>
         <li>
-          <Link to="/contact" style={{ color: "#fff", textDecoration: "none" }}>
-            Contacto
-          </Link>
+          <Link to="/contact">Contacto</Link>
         </li>
         <li>
-          <Link
-            to="/nasa-image"
-            style={{ color: "#fff", textDecoration: "none" }}
-          >
-            Imagen del dia
-          </Link>
+          <Link to="/nasa-image">Imagen del dia</Link>
         </li>
         <li>
-          <Link
-            to="/nasa-asteroides"
-            style={{ color: "#fff", textDecoration: "none" }}
-          >
-            Asteroides Cercanos
-          </Link>
+          <Link to="/nasa-asteroides">Asteroides Cercanos</Link>
         </li>
       </ul>
     </nav>

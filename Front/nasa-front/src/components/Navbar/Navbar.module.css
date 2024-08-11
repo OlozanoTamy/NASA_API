@@ -1,0 +1,42 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo de la barra de navegación */
+.navBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  list-style-type: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .navBarContainer {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna en pantallas más pequeñas. */
+    padding: 0.5rem; /* Reduce el padding para pantallas más pequeñas. */
+  }
+}
+
+.navBarContainer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navBarContainer a:hover {
+  color: #58a1ff; /* Color al pasar el cursor por encima */
+}
+
+@media (max-width: 768px) {
+  .navBarContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
