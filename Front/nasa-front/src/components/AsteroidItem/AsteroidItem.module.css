@@ -1,0 +1,28 @@
+.asteroidCard {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.asteroidCard:hover {
+  transform: scale(1.05);
+}
+
+.asteroidName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.asteroidDetails {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.dangerous {
+  color: #dc3545; /* Rojo para asteroides peligrosos */
+}

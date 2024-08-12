@@ -1,0 +1,42 @@
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+  background-color: #f0f0f0;
+  width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  height: calc(
+    100vh - 120px
+  ); /* Altura total de la pantalla menos la altura del Navbar */
+}
+
+.content {
+  max-width: 1200px;
+}
+
+.aboutSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #242527; /* Color para resaltar el título */
+}
+
+.aboutSection p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .aboutSection h2 {
+    font-size: 2rem;
+  }
+
+  .aboutSection p {
+    font-size: 1rem;
+  }
+}
